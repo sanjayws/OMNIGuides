@@ -24,7 +24,7 @@ window.$chatwoot.setUser({
     // eg: 
     //   accountId: '',
     //   userId: ''
-    //. avatar_url: '',
+    //   avatar_url: '',
   }
 })
 ```
