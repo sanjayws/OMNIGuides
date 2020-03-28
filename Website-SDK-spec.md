@@ -18,11 +18,13 @@ window.$chatwoot.open()
 ```js
 window.$chatwoot.setUser({
   email: 'email@example.com',
+  name: 'name',
   customAttributes: {
     // any additional attributes you want to add to the user
     // eg: 
     //   accountId: '',
     //   userId: ''
+    //. avatar_url: '',
   }
 })
 ```
