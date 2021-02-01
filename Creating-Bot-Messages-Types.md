@@ -2,6 +2,8 @@ Chatwoot API lets you create additional message types like cards and forms.
 
 you can create messages using the `https://www.chatwoot.com/developers/api/develop/#operation/conversationNewMessage` 
 
+<img src="https://i.imgur.com/jJbeaeT.png" width="750px" />
+
 
 ## Card Messages
 
