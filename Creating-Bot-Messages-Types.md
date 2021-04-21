@@ -10,6 +10,7 @@ you can create messages using the `https://www.chatwoot.com/developers/api/devel
 
 ```
 {
+   "content": "card message",
    "content_type":"cards",
    "content_attributes":{
       "items":[
