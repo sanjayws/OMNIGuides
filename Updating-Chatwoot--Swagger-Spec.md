@@ -1,3 +1,0 @@
-- make changes in swagger folder
-- run `rake swagger:build`
-- go to http://localhost:3000/swagger and check the documentation has been updated with your changes.
