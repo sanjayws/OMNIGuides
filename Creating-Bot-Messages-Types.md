@@ -63,6 +63,8 @@ you can create messages using the `https://www.chatwoot.com/developers/api/devel
             { "name": "email", "placeholder": "Please enter your email", "type": "email", "label": "Email", "default": "xyc@xyc.com" },
             { "name": "text_aread", "placeholder": "Please enter text", "type": "text_area", "label": "Large Text", "default": "Sample text" },
             { "name": "text", "placeholder": "Please enter text", "type": "text", "label": "text", "default": "sample input" }
+            {"name": "select","label": "Select Option", "type": "select", "options": [{ "label": "🌯 Burito", "value": "Burito" },
+          { "label": "🍝 Pasta", "value": "Pasta" }]  }
             
         ]
     },
