@@ -9,3 +9,6 @@
 - run 'bundle exec rake db:reset`
 - run `yarn`
 - run `overmind start -f Procfile.dev`
+- load the public URL for port 3000 and your chatwoot instance will be up
+- if you see webpack manifest error, wait a minute for the asset complication to finish
+
