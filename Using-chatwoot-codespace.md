@@ -8,7 +8,7 @@
   - update values for postgres, mailhog and redis hosts to localhost
 - run 'bundle exec rake db:reset`
 - run `yarn`
-- run `foreman start -f Procfile.dev`
+- run `overmind start -f Procfile.dev`
 
 ## To be fixed
 - figure out how to get WebSockets working
