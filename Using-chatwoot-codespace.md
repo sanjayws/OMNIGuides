@@ -2,9 +2,13 @@
 
 - create a codespace
 - github will open up the codespace in vscode once build finishes
-- edit the .env file and update values for postgres and redis hosts to localhost
+- open up ports 3000,3025,8025 to public
+- edit the .env file
+  - update frontend URL with the public URL for port 3000
+  - update values for postgres, mailhog and redis hosts to localhost
 - run 'bundle exec rake db:reset`
-- start the rails server && webpacker in separate terminals
+- run `yarn`
+- run `foreman start -f Procfile.dev`
 
 ## To be fixed
 - figure out how to get WebSockets working
