@@ -7,7 +7,6 @@
 
 ### Booting for the  First Time
 - In the ports tab in the visual studio, add `3000`, `8025`  and make them public
-- run `yarn`
 
 ### Development Workflow
 - start rails server by running `overmind start -f Procfile.dev`
