@@ -6,7 +6,7 @@
 - GitHub will open up the codespace in VSCode once the build finishes
 
 ### Booting for the  First Time
-- In the ports tab in the visual studio, add `3000`, `8025`  and make them public
+- In the ports tab in the visual studio, add `3000`, `3035`, `8025`  and make them public
 
 ### Development Workflow
 - start rails server by running `overmind start -f Procfile.dev`
