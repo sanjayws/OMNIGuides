@@ -2,7 +2,7 @@
 
 ### Creating Codespace
 
-- Head over to your codespaces section in GitHub and create a codespace for `chatwoot:chore/codespace`
+- Head over to your codespaces section in GitHub and create a codespace for `{you_chatwoot_repo}:{your_branch}`
 - GitHub will open up the codespace in VSCode once the build finishes
 
 ### Booting for the  First Time
