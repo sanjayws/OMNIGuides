@@ -14,4 +14,5 @@
 - if the public URL fails to load. In codespace port mapping, remove the existing mapping for the port. Add the port again. Make it public and retry again
 - When using a ruby debugger, use `overmind connect backend`, or `overmind connect worker`
 - if you see webpack manifest error, wait a minute for the asset complication to finish
+- if you face issues with `overmind start` with webpacker, run `export NODE_OPTIONS=--openssl-legacy-provider` in console
 
