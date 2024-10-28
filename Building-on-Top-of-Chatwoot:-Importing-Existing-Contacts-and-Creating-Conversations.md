@@ -1,7 +1,7 @@
-# The chatwoot conversation data model
+# The OMNI conversation data model
 
 
-<img width="500px" alt="chatwoot data modeling" src="https://i.imgur.com/TRQOiy6.png">
+<img width="500px" alt="OMNI data modeling" src="https://i.imgur.com/TRQOiy6.png">
 
 ## Data Models
 - Contacts: _represents the contacts_
@@ -12,10 +12,10 @@
 ## Associations 
 
 ### Inbox 
-Any channel which you connect in chatwoot like you website, facebook, email etc will create an associated Inbox.
+Any channel which you connect in OMNI like you website, facebook, email etc will create an associated Inbox.
 
 ### Contact 
-Represents a Person in your chatwoot CRM. a contact can have conversations in multiple inboxes via the contact Inbox relationship. The contact models helps to agregate conversations from variaous inboxes belonging to a single identity. 
+Represents a Person in your OMNI CRM. a contact can have conversations in multiple inboxes via the contact Inbox relationship. The contact models helps to agregate conversations from variaous inboxes belonging to a single identity. 
 
 ### Contact Inbox 
 This model ties a Contact & Inbox using the appropriate `source_id`. The `source_id` could be the identifier hash in case of a webwidget, `twitter_id` in case of a twitter profile and `email` in case of email channel.  
@@ -34,10 +34,10 @@ Conversation Creation uses `source_id` to tie the session and the messages toget
 
 # Import Contacts from your exisiting CRM / Software 
 
-If you are integrating chatwoot to an existing system or bringing in data from another system. Use the following.
+If you are integrating OMNI to an existing system or bringing in data from another system. Use the following.
 
 ## Use the API 
-APIs : https://www.postman.com/chatwoot/workspace/chatwoot-apis
+APIs : https://www.postman.com/OMNI/workspace/OMNI-apis
 ( /application apis/contacts/import)
 
 - api_access_token should be an administrators token. 
@@ -71,9 +71,9 @@ end
 
 ## Keeping The system in sync 
 
-If you are using chatwoot along with another system, the contacts creation happens in the other system. Keep the contacts in sync to chatwoot using the contact creation API, ever time a contact gets created/ updated. 
+If you are using OMNI along with another system, the contacts creation happens in the other system. Keep the contacts in sync to OMNI using the contact creation API, ever time a contact gets created/ updated. 
 
-APIs : https://www.postman.com/chatwoot/workspace/chatwoot-apis
+APIs : https://www.postman.com/OMNI/workspace/OMNI-apis
 - ( /application apis/contacts/create)
 - ( /application apis/contacts/update)
 
@@ -81,24 +81,24 @@ APIs : https://www.postman.com/chatwoot/workspace/chatwoot-apis
 
 # Custom Use Cases 
 
-The chatwoot APIs let you build powerful custom workflows beyond what chatwoot provides out of the box. 
+The OMNI APIs let you build powerful custom workflows beyond what OMNI provides out of the box. 
 
 ## Sending outbound messages
 
-At the time of writing chatwoot doesn't allow you to trigger outbound messages. But lets take a look at this use case to build outbound messages through twilio using chatwoot APIs. 
+At the time of writing OMNI doesn't allow you to trigger outbound messages. But lets take a look at this use case to build outbound messages through twilio using OMNI APIs. 
 
-connecting an external system containing a form to send an sms message to a contact via twilio. Connecting this system with chatwoot will let the owner to recieve the replies to the outbound messages and continue the conversation.
+connecting an external system containing a form to send an sms message to a contact via twilio. Connecting this system with OMNI will let the owner to recieve the replies to the outbound messages and continue the conversation.
 
 ### Prerequisites 
 1) **Sync the existing users and implement a mechanism to keep the new contacts synced using the instructions mentioned above**
-2) **Create a twilio Inbox in chatwoot**
+2) **Create a twilio Inbox in OMNI**
 3) **Create contact Inboxes for the contact**
 
 #### Using APIs
 
 Create contact inboxes for existing contact running a script. Implement mechanism for creating contact inbox for the newer contacts
 
-APIs : https://www.postman.com/chatwoot/workspace/chatwoot-apis
+APIs : https://www.postman.com/OMNI/workspace/OMNI-apis
 ( /application apis/contacts/contact_inbox/create)
 
 #### Script in ruby to do intial sync in bulk
@@ -118,10 +118,10 @@ end
 
 ### Use the API to create conversation
 
-APIs : https://www.postman.com/chatwoot/workspace/chatwoot-apis ( /application apis/conversations/create)
+APIs : https://www.postman.com/OMNI/workspace/OMNI-apis ( /application apis/conversations/create)
 the source id parameter will be the twilio phone number in this case. 
 
-### Send the outboud message using API or redirect the user to chatwoot
-Redirect the user to chatwoot conversation UI so they can type and send the message or use the APIs
-APIs : https://www.postman.com/chatwoot/workspace/chatwoot-apis ( /application apis/conversations/send message)
+### Send the outboud message using API or redirect the user to OMNI
+Redirect the user to OMNI conversation UI so they can type and send the message or use the APIs
+APIs : https://www.postman.com/OMNI/workspace/OMNI-apis ( /application apis/conversations/send message)
 use the above mentioned conversation ID 
